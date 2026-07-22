@@ -263,10 +263,29 @@
   </div>
 
   <div class="notify">
-    <form id="notifyForm">
-      <input type="email" id="emailInput" placeholder="you@email.com" required>
-      <button type="submit">Notify me</button>
-    </form>
+<form id="notifyForm" action="https://api.web3forms.com/submit" method="POST">
+
+    <!-- Your Web3Forms Access Key -->
+    <input type="hidden" name="access_key" value="f0fa5c2e-18d8-4e4b-8d69-23e54409a786">
+
+    <!-- Subject of the email -->
+    <input type="hidden" name="subject" value="New Visitor - Savion Integra Website">
+
+    <!-- Disable spam honeypot field -->
+    <input type="hidden" name="botcheck" value="">
+
+    <input
+        type="email"
+        id="emailInput"
+        name="email"
+        placeholder="you@email.com"
+        required>
+
+    <button type="submit">
+        Notify Savion
+    </button>
+
+</form>
     <small>We'll only email you when we launch.</small>
     <div class="confirm" id="confirmMsg">Thanks — we'll let you know when we're live.</div>
   </div>
